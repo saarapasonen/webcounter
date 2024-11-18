@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = r#'/home/pasonens/Desktop/kurssit/webcounter/webcounter/.venv'#
+    let virtual_env = r#'/home/pasonens/Desktop/kurssit/webcounter/.venv'#
     let bin = r#'bin'#
 
     let is_windows = ($nu.os-info.family) == 'windows'

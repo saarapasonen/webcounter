@@ -1,4 +1,4 @@
-#!/home/pasonens/Desktop/kurssit/webcounter/webcounter/.venv/bin/python
+#!/home/pasonens/Desktop/kurssit/webcounter/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
