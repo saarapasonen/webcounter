@@ -1,405 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2024-11-16T18:29:50.688849" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="/home/pasonens/Desktop/kurssit/webcounter/webcounter/src/tests">
-<suite id="s1-s1" name="Increment" source="/home/pasonens/Desktop/kurssit/webcounter/webcounter/src/tests/increment.robot">
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2024-11-18T14:45:21.312407" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/pasonens/Desktop/kurssit/webcounter/src/tests">
+<suite id="s1-s1" name="Increment" source="/home/pasonens/Desktop/kurssit/webcounter/src/tests/increment.robot">
 <kw name="Open And Configure Browser" owner="resource" type="SETUP">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-11-16T18:29:50.834572" elapsed="0.000341"/>
+<status status="PASS" start="2024-11-18T14:45:21.474614" elapsed="0.000343"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-16T18:29:50.835436" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5001'.</msg>
-<msg time="2024-11-16T18:29:50.894502" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-16T18:29:52.461967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-16T18:29:52.462547" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x6052fc9e08da &lt;unknown&gt;
-#1 0x6052fc505860 &lt;unknown&gt;
-#2 0x6052fc4fda61 &lt;unknown&gt;
-#3 0x6052fc4ee278 &lt;unknown&gt;
-#4 0x6052fc4eff8a &lt;unknown&gt;
-#5 0x6052fc4ee51a &lt;unknown&gt;
-#6 0x6052fc4ede14 &lt;unknown&gt;
-#7 0x6052fc4edd32 &lt;unknown&gt;
-#8 0x6052fc4ebe2c &lt;unknown&gt;
-#9 0x6052fc4ec47a &lt;unknown&gt;
-#10 0x6052fc508109 &lt;unknown&gt;
-#11 0x6052fc594705 &lt;unknown&gt;
-#12 0x6052fc5754d2 &lt;unknown&gt;
-#13 0x6052fc593a9b &lt;unknown&gt;
-#14 0x6052fc575273 &lt;unknown&gt;
-#15 0x6052fc544362 &lt;unknown&gt;
-#16 0x6052fc54533e &lt;unknown&gt;
-#17 0x6052fc9af2ef &lt;unknown&gt;
-#18 0x6052fc9b3df2 &lt;unknown&gt;
-#19 0x6052fc99d177 &lt;unknown&gt;
-#20 0x6052fc9b4571 &lt;unknown&gt;
-#21 0x6052fc9842ee &lt;unknown&gt;
-#22 0x6052fc9cfb88 &lt;unknown&gt;
-#23 0x6052fc9cfd8a &lt;unknown&gt;
-#24 0x6052fc9df58c &lt;unknown&gt;
-#25 0x76124b694ac3 &lt;unknown&gt;
-</msg>
+<msg time="2024-11-18T14:45:21.475486" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5001'.</msg>
+<msg time="2024-11-18T14:45:21.531996" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${HOME_URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2024-11-16T18:29:50.835121" elapsed="1.630367">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x6052fc9e08da &lt;unknown&gt;
-#1 0x6052fc505860 &lt;unknown&gt;
-#2 0x6052fc4fda61 &lt;unknown&gt;
-#3 0x6052fc4ee278 &lt;unknown&gt;
-#4 0x6052fc4eff8a &lt;unknown&gt;
-#5 0x6052fc4ee51a &lt;unknown&gt;
-#6 0x6052fc4ede14 &lt;unknown&gt;
-#7 0x6052fc4edd32 &lt;unknown&gt;
-#8 0x6052fc4ebe2c &lt;unknown&gt;
-#9 0x6052fc4ec47a &lt;unknown&gt;
-#10 0x6052fc508109 &lt;unknown&gt;
-#11 0x6052fc594705 &lt;unknown&gt;
-#12 0x6052fc5754d2 &lt;unknown&gt;
-#13 0x6052fc593a9b &lt;unknown&gt;
-#14 0x6052fc575273 &lt;unknown&gt;
-#15 0x6052fc544362 &lt;unknown&gt;
-#16 0x6052fc54533e &lt;unknown&gt;
-#17 0x6052fc9af2ef &lt;unknown&gt;
-#18 0x6052fc9b3df2 &lt;unknown&gt;
-#19 0x6052fc99d177 &lt;unknown&gt;
-#20 0x6052fc9b4571 &lt;unknown&gt;
-#21 0x6052fc9842ee &lt;unknown&gt;
-#22 0x6052fc9cfb88 &lt;unknown&gt;
-#23 0x6052fc9cfd8a &lt;unknown&gt;
-#24 0x6052fc9df58c &lt;unknown&gt;
-#25 0x76124b694ac3 &lt;unknown&gt;
-</status>
+<status status="PASS" start="2024-11-18T14:45:21.475169" elapsed="1.256738"/>
 </kw>
-<status status="FAIL" start="2024-11-16T18:29:50.833787" elapsed="1.632468">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x6052fc9e08da &lt;unknown&gt;
-#1 0x6052fc505860 &lt;unknown&gt;
-#2 0x6052fc4fda61 &lt;unknown&gt;
-#3 0x6052fc4ee278 &lt;unknown&gt;
-#4 0x6052fc4eff8a &lt;unknown&gt;
-#5 0x6052fc4ee51a &lt;unknown&gt;
-#6 0x6052fc4ede14 &lt;unknown&gt;
-#7 0x6052fc4edd32 &lt;unknown&gt;
-#8 0x6052fc4ebe2c &lt;unknown&gt;
-#9 0x6052fc4ec47a &lt;unknown&gt;
-#10 0x6052fc508109 &lt;unknown&gt;
-#11 0x6052fc594705 &lt;unknown&gt;
-#12 0x6052fc5754d2 &lt;unknown&gt;
-#13 0x6052fc593a9b &lt;unknown&gt;
-#14 0x6052fc575273 &lt;unknown&gt;
-#15 0x6052fc544362 &lt;unknown&gt;
-#16 0x6052fc54533e &lt;unknown&gt;
-#17 0x6052fc9af2ef &lt;unknown&gt;
-#18 0x6052fc9b3df2 &lt;unknown&gt;
-#19 0x6052fc99d177 &lt;unknown&gt;
-#20 0x6052fc9b4571 &lt;unknown&gt;
-#21 0x6052fc9842ee &lt;unknown&gt;
-#22 0x6052fc9cfb88 &lt;unknown&gt;
-#23 0x6052fc9cfd8a &lt;unknown&gt;
-#24 0x6052fc9df58c &lt;unknown&gt;
-#25 0x76124b694ac3 &lt;unknown&gt;
-</status>
+<status status="PASS" start="2024-11-18T14:45:21.473725" elapsed="1.258892"/>
 </kw>
 <test id="s1-s1-t1" name="At start the counter is zero" line="7">
-<status status="FAIL" start="2024-11-16T18:29:52.466666" elapsed="0.001460">Parent suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x6052fc9e08da &lt;unknown&gt;
-#1 0x6052fc505860 &lt;unknown&gt;
-#2 0x6052fc4fda61 &lt;unknown&gt;
-#3 0x6052fc4ee278 &lt;unknown&gt;
-#4 0x6052fc4eff8a &lt;unknown&gt;
-#5 0x6052fc4ee51a &lt;unknown&gt;
-#6 0x6052fc4ede14 &lt;unknown&gt;
-#7 0x6052fc4edd32 &lt;unknown&gt;
-#8 0x6052fc4ebe2c &lt;unknown&gt;
-#9 0x6052fc4ec47a &lt;unknown&gt;
-#10 0x6052fc508109 &lt;unknown&gt;
-#11 0x6052fc594705 &lt;unknown&gt;
-#12 0x6052fc5754d2 &lt;unknown&gt;
-#13 0x6052fc593a9b &lt;unknown&gt;
-#14 0x6052fc575273 &lt;unknown&gt;
-#15 0x6052fc544362 &lt;unknown&gt;
-#16 0x6052fc54533e &lt;unknown&gt;
-#17 0x6052fc9af2ef &lt;unknown&gt;
-#18 0x6052fc9b3df2 &lt;unknown&gt;
-#19 0x6052fc99d177 &lt;unknown&gt;
-#20 0x6052fc9b4571 &lt;unknown&gt;
-#21 0x6052fc9842ee &lt;unknown&gt;
-#22 0x6052fc9cfb88 &lt;unknown&gt;
-#23 0x6052fc9cfd8a &lt;unknown&gt;
-#24 0x6052fc9df58c &lt;unknown&gt;
-#25 0x76124b694ac3 &lt;unknown&gt;
-</status>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:22.735205" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-18T14:45:22.734574" elapsed="0.536720"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:23.787120" level="INFO">Page title is 'Laskuri'.</msg>
+<arg>Laskuri</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-18T14:45:23.272846" elapsed="0.515008"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:24.820412" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
+<arg>nappia painettu 0 kertaa</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-18T14:45:23.789204" elapsed="1.031783"/>
+</kw>
+<status status="PASS" start="2024-11-18T14:45:22.733050" elapsed="2.089038"/>
 </test>
 <test id="s1-s1-t2" name="When button pressed twice the counter is two" line="12">
-<status status="FAIL" start="2024-11-16T18:29:52.468922" elapsed="0.000827">Parent suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x6052fc9e08da &lt;unknown&gt;
-#1 0x6052fc505860 &lt;unknown&gt;
-#2 0x6052fc4fda61 &lt;unknown&gt;
-#3 0x6052fc4ee278 &lt;unknown&gt;
-#4 0x6052fc4eff8a &lt;unknown&gt;
-#5 0x6052fc4ee51a &lt;unknown&gt;
-#6 0x6052fc4ede14 &lt;unknown&gt;
-#7 0x6052fc4edd32 &lt;unknown&gt;
-#8 0x6052fc4ebe2c &lt;unknown&gt;
-#9 0x6052fc4ec47a &lt;unknown&gt;
-#10 0x6052fc508109 &lt;unknown&gt;
-#11 0x6052fc594705 &lt;unknown&gt;
-#12 0x6052fc5754d2 &lt;unknown&gt;
-#13 0x6052fc593a9b &lt;unknown&gt;
-#14 0x6052fc575273 &lt;unknown&gt;
-#15 0x6052fc544362 &lt;unknown&gt;
-#16 0x6052fc54533e &lt;unknown&gt;
-#17 0x6052fc9af2ef &lt;unknown&gt;
-#18 0x6052fc9b3df2 &lt;unknown&gt;
-#19 0x6052fc99d177 &lt;unknown&gt;
-#20 0x6052fc9b4571 &lt;unknown&gt;
-#21 0x6052fc9842ee &lt;unknown&gt;
-#22 0x6052fc9cfb88 &lt;unknown&gt;
-#23 0x6052fc9cfd8a &lt;unknown&gt;
-#24 0x6052fc9df58c &lt;unknown&gt;
-#25 0x76124b694ac3 &lt;unknown&gt;
-</status>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:24.824646" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-18T14:45:24.824074" elapsed="0.536345"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:25.364749" level="INFO">Clicking button 'Paina'.</msg>
+<arg>Paina</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-18T14:45:25.361650" elapsed="1.633909"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:26.997656" level="INFO">Clicking button 'Paina'.</msg>
+<arg>Paina</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-18T14:45:26.996802" elapsed="1.604808"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:29.632251" level="INFO">Current page contains text 'nappia painettu 2 kertaa'.</msg>
+<arg>nappia painettu 2 kertaa</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-18T14:45:28.602711" elapsed="1.029961"/>
+</kw>
+<status status="PASS" start="2024-11-18T14:45:24.822944" elapsed="4.810550"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-16T18:29:52.471220" elapsed="0.563092"/>
+<status status="PASS" start="2024-11-18T14:45:29.635019" elapsed="0.560967"/>
 </kw>
-<status status="FAIL" start="2024-11-16T18:29:50.709566" elapsed="2.324974">Suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x6052fc9e08da &lt;unknown&gt;
-#1 0x6052fc505860 &lt;unknown&gt;
-#2 0x6052fc4fda61 &lt;unknown&gt;
-#3 0x6052fc4ee278 &lt;unknown&gt;
-#4 0x6052fc4eff8a &lt;unknown&gt;
-#5 0x6052fc4ee51a &lt;unknown&gt;
-#6 0x6052fc4ede14 &lt;unknown&gt;
-#7 0x6052fc4edd32 &lt;unknown&gt;
-#8 0x6052fc4ebe2c &lt;unknown&gt;
-#9 0x6052fc4ec47a &lt;unknown&gt;
-#10 0x6052fc508109 &lt;unknown&gt;
-#11 0x6052fc594705 &lt;unknown&gt;
-#12 0x6052fc5754d2 &lt;unknown&gt;
-#13 0x6052fc593a9b &lt;unknown&gt;
-#14 0x6052fc575273 &lt;unknown&gt;
-#15 0x6052fc544362 &lt;unknown&gt;
-#16 0x6052fc54533e &lt;unknown&gt;
-#17 0x6052fc9af2ef &lt;unknown&gt;
-#18 0x6052fc9b3df2 &lt;unknown&gt;
-#19 0x6052fc99d177 &lt;unknown&gt;
-#20 0x6052fc9b4571 &lt;unknown&gt;
-#21 0x6052fc9842ee &lt;unknown&gt;
-#22 0x6052fc9cfb88 &lt;unknown&gt;
-#23 0x6052fc9cfd8a &lt;unknown&gt;
-#24 0x6052fc9df58c &lt;unknown&gt;
-#25 0x76124b694ac3 &lt;unknown&gt;
-</status>
+<status status="PASS" start="2024-11-18T14:45:21.334187" elapsed="8.862045"/>
 </suite>
-<suite id="s1-s2" name="Reset" source="/home/pasonens/Desktop/kurssit/webcounter/webcounter/src/tests/reset.robot">
+<suite id="s1-s2" name="Reset" source="/home/pasonens/Desktop/kurssit/webcounter/src/tests/reset.robot">
 <kw name="Open And Configure Browser" owner="resource" type="SETUP">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-11-16T18:29:53.041233" elapsed="0.000477"/>
+<status status="PASS" start="2024-11-18T14:45:30.202262" elapsed="0.000467"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-16T18:29:53.042519" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5001'.</msg>
-<msg time="2024-11-16T18:29:53.129383" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-16T18:29:54.738106" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-16T18:29:54.738784" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x64c7193048da &lt;unknown&gt;
-#1 0x64c718e29860 &lt;unknown&gt;
-#2 0x64c718e21a61 &lt;unknown&gt;
-#3 0x64c718e12278 &lt;unknown&gt;
-#4 0x64c718e13f8a &lt;unknown&gt;
-#5 0x64c718e1251a &lt;unknown&gt;
-#6 0x64c718e11e14 &lt;unknown&gt;
-#7 0x64c718e11d32 &lt;unknown&gt;
-#8 0x64c718e0fe2c &lt;unknown&gt;
-#9 0x64c718e1047a &lt;unknown&gt;
-#10 0x64c718e2c109 &lt;unknown&gt;
-#11 0x64c718eb8705 &lt;unknown&gt;
-#12 0x64c718e994d2 &lt;unknown&gt;
-#13 0x64c718eb7a9b &lt;unknown&gt;
-#14 0x64c718e99273 &lt;unknown&gt;
-#15 0x64c718e68362 &lt;unknown&gt;
-#16 0x64c718e6933e &lt;unknown&gt;
-#17 0x64c7192d32ef &lt;unknown&gt;
-#18 0x64c7192d7df2 &lt;unknown&gt;
-#19 0x64c7192c1177 &lt;unknown&gt;
-#20 0x64c7192d8571 &lt;unknown&gt;
-#21 0x64c7192a82ee &lt;unknown&gt;
-#22 0x64c7192f3b88 &lt;unknown&gt;
-#23 0x64c7192f3d8a &lt;unknown&gt;
-#24 0x64c71930358c &lt;unknown&gt;
-#25 0x706f80e94ac3 &lt;unknown&gt;
-</msg>
+<msg time="2024-11-18T14:45:30.203459" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5001'.</msg>
+<msg time="2024-11-18T14:45:30.270807" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${HOME_URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2024-11-16T18:29:53.042043" elapsed="1.697446">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x64c7193048da &lt;unknown&gt;
-#1 0x64c718e29860 &lt;unknown&gt;
-#2 0x64c718e21a61 &lt;unknown&gt;
-#3 0x64c718e12278 &lt;unknown&gt;
-#4 0x64c718e13f8a &lt;unknown&gt;
-#5 0x64c718e1251a &lt;unknown&gt;
-#6 0x64c718e11e14 &lt;unknown&gt;
-#7 0x64c718e11d32 &lt;unknown&gt;
-#8 0x64c718e0fe2c &lt;unknown&gt;
-#9 0x64c718e1047a &lt;unknown&gt;
-#10 0x64c718e2c109 &lt;unknown&gt;
-#11 0x64c718eb8705 &lt;unknown&gt;
-#12 0x64c718e994d2 &lt;unknown&gt;
-#13 0x64c718eb7a9b &lt;unknown&gt;
-#14 0x64c718e99273 &lt;unknown&gt;
-#15 0x64c718e68362 &lt;unknown&gt;
-#16 0x64c718e6933e &lt;unknown&gt;
-#17 0x64c7192d32ef &lt;unknown&gt;
-#18 0x64c7192d7df2 &lt;unknown&gt;
-#19 0x64c7192c1177 &lt;unknown&gt;
-#20 0x64c7192d8571 &lt;unknown&gt;
-#21 0x64c7192a82ee &lt;unknown&gt;
-#22 0x64c7192f3b88 &lt;unknown&gt;
-#23 0x64c7192f3d8a &lt;unknown&gt;
-#24 0x64c71930358c &lt;unknown&gt;
-#25 0x706f80e94ac3 &lt;unknown&gt;
-</status>
+<status status="PASS" start="2024-11-18T14:45:30.203001" elapsed="1.276229"/>
 </kw>
-<status status="FAIL" start="2024-11-16T18:29:53.040758" elapsed="1.699349">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x64c7193048da &lt;unknown&gt;
-#1 0x64c718e29860 &lt;unknown&gt;
-#2 0x64c718e21a61 &lt;unknown&gt;
-#3 0x64c718e12278 &lt;unknown&gt;
-#4 0x64c718e13f8a &lt;unknown&gt;
-#5 0x64c718e1251a &lt;unknown&gt;
-#6 0x64c718e11e14 &lt;unknown&gt;
-#7 0x64c718e11d32 &lt;unknown&gt;
-#8 0x64c718e0fe2c &lt;unknown&gt;
-#9 0x64c718e1047a &lt;unknown&gt;
-#10 0x64c718e2c109 &lt;unknown&gt;
-#11 0x64c718eb8705 &lt;unknown&gt;
-#12 0x64c718e994d2 &lt;unknown&gt;
-#13 0x64c718eb7a9b &lt;unknown&gt;
-#14 0x64c718e99273 &lt;unknown&gt;
-#15 0x64c718e68362 &lt;unknown&gt;
-#16 0x64c718e6933e &lt;unknown&gt;
-#17 0x64c7192d32ef &lt;unknown&gt;
-#18 0x64c7192d7df2 &lt;unknown&gt;
-#19 0x64c7192c1177 &lt;unknown&gt;
-#20 0x64c7192d8571 &lt;unknown&gt;
-#21 0x64c7192a82ee &lt;unknown&gt;
-#22 0x64c7192f3b88 &lt;unknown&gt;
-#23 0x64c7192f3d8a &lt;unknown&gt;
-#24 0x64c71930358c &lt;unknown&gt;
-#25 0x706f80e94ac3 &lt;unknown&gt;
-</status>
+<status status="PASS" start="2024-11-18T14:45:30.201819" elapsed="1.278361"/>
 </kw>
 <test id="s1-s2-t1" name="When counter has a nonzero value and it is reset the value becomes zero" line="7">
-<status status="FAIL" start="2024-11-16T18:29:54.740478" elapsed="0.001145">Parent suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x64c7193048da &lt;unknown&gt;
-#1 0x64c718e29860 &lt;unknown&gt;
-#2 0x64c718e21a61 &lt;unknown&gt;
-#3 0x64c718e12278 &lt;unknown&gt;
-#4 0x64c718e13f8a &lt;unknown&gt;
-#5 0x64c718e1251a &lt;unknown&gt;
-#6 0x64c718e11e14 &lt;unknown&gt;
-#7 0x64c718e11d32 &lt;unknown&gt;
-#8 0x64c718e0fe2c &lt;unknown&gt;
-#9 0x64c718e1047a &lt;unknown&gt;
-#10 0x64c718e2c109 &lt;unknown&gt;
-#11 0x64c718eb8705 &lt;unknown&gt;
-#12 0x64c718e994d2 &lt;unknown&gt;
-#13 0x64c718eb7a9b &lt;unknown&gt;
-#14 0x64c718e99273 &lt;unknown&gt;
-#15 0x64c718e68362 &lt;unknown&gt;
-#16 0x64c718e6933e &lt;unknown&gt;
-#17 0x64c7192d32ef &lt;unknown&gt;
-#18 0x64c7192d7df2 &lt;unknown&gt;
-#19 0x64c7192c1177 &lt;unknown&gt;
-#20 0x64c7192d8571 &lt;unknown&gt;
-#21 0x64c7192a82ee &lt;unknown&gt;
-#22 0x64c7192f3b88 &lt;unknown&gt;
-#23 0x64c7192f3d8a &lt;unknown&gt;
-#24 0x64c71930358c &lt;unknown&gt;
-#25 0x706f80e94ac3 &lt;unknown&gt;
-</status>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:31.483516" level="INFO">Opening url 'http://localhost:5001'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-18T14:45:31.482758" elapsed="0.535761"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:32.020472" level="INFO">Clicking button 'Paina'.</msg>
+<arg>Paina</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-18T14:45:32.019681" elapsed="1.619209"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:33.641148" level="INFO">Clicking button 'Paina'.</msg>
+<arg>Paina</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-18T14:45:33.640269" elapsed="1.614254"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-18T14:45:37.924515" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-18T14:45:37.925217" level="FAIL">Page should have contained text 'nappia painettu 2 kertaa' but did not.</msg>
+<arg>nappia painettu 2 kertaa</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-11-18T14:45:35.255731" elapsed="2.671701">Page should have contained text 'nappia painettu 2 kertaa' but did not.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>Nollaa</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-18T14:45:37.927996" elapsed="0.000096"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>nappia painettu 0 kertaa</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-11-18T14:45:37.928406" elapsed="0.000063"/>
+</kw>
+<status status="FAIL" start="2024-11-18T14:45:31.480777" elapsed="6.448107">Page should have contained text 'nappia painettu 2 kertaa' but did not.</status>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-16T18:29:54.742520" elapsed="0.568136"/>
+<status status="PASS" start="2024-11-18T14:45:37.929709" elapsed="0.561002"/>
 </kw>
-<status status="FAIL" start="2024-11-16T18:29:53.036426" elapsed="2.274484">Suite setup failed:
-WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=131.0.6778.69)
-Stacktrace:
-#0 0x64c7193048da &lt;unknown&gt;
-#1 0x64c718e29860 &lt;unknown&gt;
-#2 0x64c718e21a61 &lt;unknown&gt;
-#3 0x64c718e12278 &lt;unknown&gt;
-#4 0x64c718e13f8a &lt;unknown&gt;
-#5 0x64c718e1251a &lt;unknown&gt;
-#6 0x64c718e11e14 &lt;unknown&gt;
-#7 0x64c718e11d32 &lt;unknown&gt;
-#8 0x64c718e0fe2c &lt;unknown&gt;
-#9 0x64c718e1047a &lt;unknown&gt;
-#10 0x64c718e2c109 &lt;unknown&gt;
-#11 0x64c718eb8705 &lt;unknown&gt;
-#12 0x64c718e994d2 &lt;unknown&gt;
-#13 0x64c718eb7a9b &lt;unknown&gt;
-#14 0x64c718e99273 &lt;unknown&gt;
-#15 0x64c718e68362 &lt;unknown&gt;
-#16 0x64c718e6933e &lt;unknown&gt;
-#17 0x64c7192d32ef &lt;unknown&gt;
-#18 0x64c7192d7df2 &lt;unknown&gt;
-#19 0x64c7192c1177 &lt;unknown&gt;
-#20 0x64c7192d8571 &lt;unknown&gt;
-#21 0x64c7192a82ee &lt;unknown&gt;
-#22 0x64c7192f3b88 &lt;unknown&gt;
-#23 0x64c7192f3d8a &lt;unknown&gt;
-#24 0x64c71930358c &lt;unknown&gt;
-#25 0x706f80e94ac3 &lt;unknown&gt;
-</status>
+<status status="FAIL" start="2024-11-18T14:45:30.197529" elapsed="8.293434"/>
 </suite>
-<status status="FAIL" start="2024-11-16T18:29:50.689796" elapsed="4.623244"/>
+<status status="FAIL" start="2024-11-18T14:45:21.313396" elapsed="17.179457"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="3" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s1" name="Increment">Tests.Increment</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Increment">Tests.Increment</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s2" name="Reset">Tests.Reset</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-16T18:29:50.894502" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-16T18:29:53.129383" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-18T14:45:21.531996" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-18T14:45:30.270807" level="WARN">The chromedriver version (130.0.6723.91) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
